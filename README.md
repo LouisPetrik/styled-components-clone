@@ -2,6 +2,17 @@ Be aware of cringe code.
 Only 1.73 kb in size! (Not compressed but minified)
 The magic happens in src/styled.js
 
+## Features 
+* Same syntax as styled-components 
+* Styled components can have child elements 
+* Pretty damn small
+* It can run Crysis 
+
+## To-dos 
+1. Clean up the code more 
+2. Make it understand JavaScript expressions 
+3. Learn how to create pretty READMEs
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
