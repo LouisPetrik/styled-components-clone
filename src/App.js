@@ -4,13 +4,10 @@ import styled from "./styled"
 
 const Headline = styled.h1`
   font-family: fantasy; 
-  color: #eb4034;
-  font-size: 24px;
+  color: red;
+  text-decoration: underline;
 `
 
-const ItalicText = styled.i`
-  color: red; 
-`
 
 //console.log(proxy.h1`some css`) // from the handler
 //testing.h1``
@@ -18,11 +15,14 @@ const ItalicText = styled.i`
 // es muss vom type function sein, damit es im 
 // DOM von react gerendert werden kann. 
 
-console.log("was headline ist")
-console.log(Headline)
 
+// bug detected: css-attribute must be same depth in line as const-declaration 
 
 function App() {
+
+  const ItalicText = styled.i`
+    color: white; 
+  `
   return (
     <div>
       <Headline>

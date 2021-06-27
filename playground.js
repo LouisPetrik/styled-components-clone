@@ -1,13 +1,14 @@
 
 
 // place for quick drafts for code 
-let cssArray = ["font-family: Fantasy", "color: #53c7f5"]
+let cssArray = [" font-family: fantasy", "color: red", "font-size: 24px"]
 
 // goal: { style: { fontFamily: "Fantasy", color: "#53c7f5" } }
 // therefore, we construct the object style has as attribute 
 let cssObject = {}
 
 for (let i = 0; i < cssArray.length; i++) {
+  cssArray[i] = cssArray[i].trim()
   cssArray[i] = cssArray[i].replace(/\-([a-z])/g, v => v[1].toUpperCase());
   cssArray[i] = cssArray[i].split(":")
 }
