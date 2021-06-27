@@ -12,7 +12,7 @@ const Headline = styled.h1`
 function App() {
 
   const ItalicText = styled.i`
-    color: green; 
+   color: green; 
   `
   return (
     <div>

@@ -8,14 +8,14 @@ function BuildComponent(props) {
   // the object we can use as working CSS-in-JS
   let cssObject = {}
 
-  for (let i = 0; i < cssArray.length; i++) {
-    // removing the whitespace 
-    cssArray[i] = cssArray[i].trim()
-    // converting font-family to fontFamily etc. 
-    cssArray[i] = cssArray[i].replace(/\-([a-z])/g, v => v[1].toUpperCase());
-    // splitting each CSS-statement into a value pair, for the object 
-    cssArray[i] = cssArray[i].split(":")
-  }
+  cssArray = cssArray.map((item) => {
+    return item
+      .trim()
+      // converting font-family to fontFamily etc. 
+      .replace(/\-([a-z])/g, v => v[1].toUpperCase())
+      // splitting each CSS-statement into a value pair, for the object 
+      .split(":")
+  })
 
   // converting the cssArray to an object "cssObject"
   for (const key of cssArray) {
@@ -52,10 +52,13 @@ const handler = {
       let cssLines = cssString[0].split(";")
 
       // removing the original line-breaks, and whitespace 
-      for (let i = 0; i < cssLines.length; i++) {
-        cssLines[i] = cssLines[i].replace("\n", "")
-        cssLines[i] = cssLines[i].replace("  ", "")
-      }
+
+      cssLines = cssLines.map((item) => {
+        return item
+          .replace("\n", "")
+          .replace("  ", "")
+      })
+
       // deleting the last element of the array, since it's empty 
       cssLines.pop()
 
