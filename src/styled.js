@@ -48,11 +48,31 @@ function constructComponent (cssString, prop) {
 
 function BuildComponent(props) {
   console.log("css props in buildcomponent")
+  console.log("css array")
   console.log(props.css)
+
+  let cssArray = props.css
+  // the object we can use as working CSS-in-JS
+  let cssObject = {}
+  
+
+  for (let i = 0; i < cssArray.length; i++) {
+    cssArray[i] = cssArray[i].replace(/\-([a-z])/g, v => v[1].toUpperCase());
+    cssArray[i] = cssArray[i].split(":")
+  }
+
+  for (const key of cssArray) {
+    cssObject[key[0]] = key[1];
+  }
+
+  // the final cssObject: 
+  console.log("the final css object")
+  console.log(cssObject)
+
 
   return React.createElement(
     props.tag, 
-    {style: { fontFamily: "Fantasy", color: "#53c7f5" }}, 
+    {style: cssObject }, 
     [props.children]
   )
 }

@@ -3,13 +3,13 @@ import styled from "./styled"
 
 
 const Headline = styled.h1`
-  font-family: Arial; 
+  font-family: fantasy; 
   color: #eb4034;
   font-size: 24px;
 `
 
 const ItalicText = styled.i`
-  color: green; 
+  color: red; 
 `
 
 //console.log(proxy.h1`some css`) // from the handler

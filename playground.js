@@ -14,13 +14,13 @@ for (let i = 0; i < cssArray.length; i++) {
 
 
 
-
+/*
 for (let i = 0; i < cssArray.length; i++) {
   // getting the second attribute, always to string in " "
   console.log(cssArray[i][1])
-  cssArray[i][1] = '"' + cssArray[i][1] + '"'
+  //cssArray[i][1] = '"' + cssArray[i][1] + '"'
 }
-
+*/
 for (const key of cssArray) {
 
   cssObject[key[0]] = key[1];
