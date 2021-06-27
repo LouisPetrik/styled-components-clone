@@ -49,7 +49,12 @@ function constructComponent (cssString, prop) {
 function BuildComponent(props) {
   console.log("css props in buildcomponent")
   console.log(props.css)
-  return React.createElement(props.tag, [], [props.children])
+
+  return React.createElement(
+    props.tag, 
+    {style: { color: "red", fontFamily: "Fantasy"}}, 
+    [props.children]
+  )
 }
 
 // more props coming later 
@@ -83,7 +88,7 @@ const handler = {
     
       return function(props) { 
         // returns the element, actually rendered 
-        return <BuildComponent css={cssLines} tag={prop}>{props.children}</BuildComponent>
+        return <BuildComponent style={{color: "green"}} css={cssLines} tag={prop}>{props.children}</BuildComponent>
       }
       // eigentlich war das der Aufruf, 
       //return constructComponent(cssString, prop)

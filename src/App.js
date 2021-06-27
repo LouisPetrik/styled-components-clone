@@ -8,6 +8,10 @@ const Headline = styled.h1`
   font-size: 24px;
 `
 
+const ItalicText = styled.i`
+  color: green; 
+`
+
 //console.log(proxy.h1`some css`) // from the handler
 //testing.h1``
 
@@ -21,7 +25,12 @@ console.log(Headline)
 function App() {
   return (
     <div>
-      <Headline>Let's change it up</Headline>
+      <Headline>
+        My headline
+      </Headline>
+      <ItalicText>
+        My italic
+      </ItalicText>
     </div>
   )
 }
