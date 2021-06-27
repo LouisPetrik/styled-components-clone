@@ -9,19 +9,10 @@ const Headline = styled.h1`
 `
 
 
-//console.log(proxy.h1`some css`) // from the handler
-//testing.h1``
-
-// es muss vom type function sein, damit es im 
-// DOM von react gerendert werden kann. 
-
-
-// bug detected: css-attribute must be same depth in line as const-declaration 
-
 function App() {
 
   const ItalicText = styled.i`
-    color: white; 
+    color: green; 
   `
   return (
     <div>
@@ -34,8 +25,5 @@ function App() {
     </div>
   )
 }
-
-// todos:
-// für jedes aufgerufene object automatisch eines erstellen ? 
 
 export default App;
