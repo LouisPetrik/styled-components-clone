@@ -1,5 +1,5 @@
 Be aware of cringe code. 
-Only 1.73 kb in size! (Not compressed but minified)
+Only 1.73 kb in size! (Not compressed but minified). \
 The magic happens in src/styled.js
 
 ## Features 
