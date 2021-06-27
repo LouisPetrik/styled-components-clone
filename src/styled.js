@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { css } from "styled-components";
 
 /*
 const construct = (strings) => {
@@ -46,6 +47,8 @@ function constructComponent (cssString, prop) {
 
 
 function BuildComponent(props) {
+  console.log("css props in buildcomponent")
+  console.log(props.css)
   return React.createElement(props.tag, [], [props.children])
 }
 
@@ -60,12 +63,27 @@ const handler = {
     console.log(target)
     console.log(prop) // h1 
     // das ist die function, die styled.h1`` aufruft
+
+    // the function, styled.h1`` is calling 
+    // cssString = what's inside the `` 
     return function(cssString) {
       console.log("styled.h1 params")
       console.log(arguments)
+      
+      // splitting the CSS into an array of statements
+      let cssLines = cssString[0].split(";")
+      console.log("css lines type")
+      console.log(typeof(cssLines))
+      for (let i = 0; i < cssLines.length; i++) {
+        cssLines[i] = cssLines[i].replace("\n", "")
+        cssLines[i] = cssLines[i].replace("  ", "")
+      }
+      cssLines.pop()
 
-      return function(props) {
-        return <BuildComponent css={cssString} tag={prop}>{props.children}</BuildComponent>
+    
+      return function(props) { 
+        // returns the element, actually rendered 
+        return <BuildComponent css={cssLines} tag={prop}>{props.children}</BuildComponent>
       }
       // eigentlich war das der Aufruf, 
       //return constructComponent(cssString, prop)

@@ -3,7 +3,7 @@ import styled from "./styled"
 
 
 const Headline = styled.h1`
-  font-family: Arial;
+  font-family: Arial; 
   color: #eb4034;
   font-size: 24px;
 `
