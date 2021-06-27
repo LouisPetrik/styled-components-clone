@@ -1,5 +1,6 @@
 Be aware of cringe code. 
 Only 1.73 kb in size! (Not compressed but minified)
+The magic happens in src/styled.js
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
