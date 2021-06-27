@@ -52,7 +52,7 @@ function BuildComponent(props) {
 
   return React.createElement(
     props.tag, 
-    {style: { color: "red", fontFamily: "Fantasy"}}, 
+    {style: { fontFamily: "Fantasy", color: "#53c7f5" }}, 
     [props.children]
   )
 }
