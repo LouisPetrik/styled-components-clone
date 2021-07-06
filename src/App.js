@@ -11,7 +11,7 @@ const Headline = styled.h1`
 
 function App() {
   const Title = styled.p`
-    color: red; 
+    color: green; 
   `
   
   return (

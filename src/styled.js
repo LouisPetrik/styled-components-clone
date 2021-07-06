@@ -7,15 +7,24 @@ function BuildComponent(props) {
   console.log(cssArray)
   // the object we can use as working CSS-in-JS
 
+  
   let cssObject = {}
 
   cssArray.map((item) => {
+    // altering each item
     item = item
+      // removing whitespace on the side
       .trim()
+      // converting i. e. font-family to fontFamily 
       .replace(/\-([a-z])/g, v => v[1].toUpperCase());
 
-      // splitting each CSS-statement into a value pair, for the object 
-    cssObject[item.split(":")[0]] = item.split(":")[1]
+    // attribute of the CSS-line, i. e. color, font-family or width 
+    let attribute = item.split(":")[0]
+    // value of the CSS-line, i. e. red, Arial or 200 px 
+    let value = item.split(":")[1]
+
+    // merging att and value to a whole statement in the object 
+    cssObject[attribute] = value 
   })
 
   // the final cssObject: 
