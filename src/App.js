@@ -10,18 +10,16 @@ const Headline = styled.h1`
 
 
 function App() {
-
-  const ItalicText = styled.i`
-   color: green; 
+  const Title = styled.p`
+    color: red; 
   `
+  
   return (
     <div>
       <Headline>
         My headline
       </Headline>
-      <ItalicText>
-        My italic
-      </ItalicText>
+      <Title>Hello world</Title>
     </div>
   )
 }

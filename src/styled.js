@@ -6,21 +6,17 @@ function BuildComponent(props) {
   console.log("the array of css")
   console.log(cssArray)
   // the object we can use as working CSS-in-JS
+
   let cssObject = {}
 
-  cssArray = cssArray.map((item) => {
-    return item
+  cssArray.map((item) => {
+    item = item
       .trim()
-      // converting font-family to fontFamily etc. 
-      .replace(/\-([a-z])/g, v => v[1].toUpperCase())
-      // splitting each CSS-statement into a value pair, for the object 
-      .split(":")
-  })
+      .replace(/\-([a-z])/g, v => v[1].toUpperCase());
 
-  // converting the cssArray to an object "cssObject"
-  for (const key of cssArray) {
-    cssObject[key[0]] = key[1];
-  }
+      // splitting each CSS-statement into a value pair, for the object 
+    cssObject[item.split(":")[0]] = item.split(":")[1]
+  })
 
   // the final cssObject: 
   console.log("the final css object")
@@ -85,4 +81,3 @@ const styled = new Proxy(target, handler)
 
 
 export default styled
-
