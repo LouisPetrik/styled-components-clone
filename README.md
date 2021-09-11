@@ -1,6 +1,6 @@
 Be aware of cringe code. 
 Only 1.73 kb in size! (Not compressed but minified). \
-The magic happens in src/styled.js
+The magic happens in src/styled.js, the rest is a React boilerplate to test the code. 
 
 ## Features 
 * Same syntax as styled-components 
