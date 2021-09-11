@@ -8,6 +8,11 @@ The magic happens in src/styled.js
 * Pretty damn small
 * It can run Crysis 
 
+
+## The bad sides 
+* Uses inline styles in the DOM 
+* You cannot use variables or other types of expressions 
+
 ## To-dos 
 1. Clean up the code more 
 2. Make it understand JavaScript expressions 
